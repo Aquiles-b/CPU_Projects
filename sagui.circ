@@ -85,7 +85,7 @@
     <a name="appearance" val="logisim_evolution"/>
     <a name="circuit" val="main"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
-    <a name="simulationFrequency" val="1.0"/>
+    <a name="simulationFrequency" val="4.0"/>
     <comp lib="0" loc="(1040,170)" name="Tunnel">
       <a name="label" val="jump"/>
     </comp>
@@ -97,7 +97,7 @@
       <a name="width" val="4"/>
     </comp>
     <comp lib="0" loc="(1050,110)" name="Tunnel">
-      <a name="label" val="regZero"/>
+      <a name="label" val="pcREGb"/>
     </comp>
     <comp lib="0" loc="(1050,140)" name="Tunnel">
       <a name="label" val="memOUreg"/>
@@ -173,31 +173,28 @@
       <a name="facing" val="south"/>
       <a name="value" val="0x0"/>
     </comp>
-    <comp lib="0" loc="(340,450)" name="Tunnel">
+    <comp lib="0" loc="(330,450)" name="Tunnel">
       <a name="facing" val="north"/>
       <a name="label" val="immOUregB"/>
     </comp>
-    <comp lib="0" loc="(400,340)" name="Tunnel">
-      <a name="facing" val="north"/>
-      <a name="label" val="jump"/>
+    <comp lib="0" loc="(390,430)" name="Tunnel">
+      <a name="label" val="ehZero"/>
     </comp>
     <comp lib="0" loc="(430,300)" name="Tunnel">
       <a name="facing" val="north"/>
       <a name="label" val="clk"/>
     </comp>
-    <comp lib="0" loc="(440,450)" name="Tunnel">
-      <a name="label" val="regZero"/>
+    <comp lib="0" loc="(430,390)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="jump"/>
     </comp>
     <comp lib="0" loc="(450,270)" name="Constant"/>
-    <comp lib="0" loc="(460,400)" name="Tunnel">
-      <a name="label" val="ehZero"/>
-    </comp>
-    <comp lib="0" loc="(460,420)" name="Constant">
-      <a name="facing" val="west"/>
-    </comp>
     <comp lib="0" loc="(480,320)" name="Tunnel">
       <a name="facing" val="north"/>
       <a name="label" val="cls"/>
+    </comp>
+    <comp lib="0" loc="(480,370)" name="Tunnel">
+      <a name="label" val="pcREGb"/>
     </comp>
     <comp lib="0" loc="(600,40)" name="Tunnel">
       <a name="facing" val="east"/>
@@ -253,13 +250,16 @@
     </comp>
     <comp lib="0" loc="(910,240)" name="Tunnel">
       <a name="facing" val="south"/>
-      <a name="label" val="regZero"/>
+      <a name="label" val="immOUregB"/>
     </comp>
     <comp lib="0" loc="(990,420)" name="Tunnel">
       <a name="facing" val="north"/>
       <a name="label" val="clk"/>
     </comp>
-    <comp lib="1" loc="(350,250)" name="AND Gate">
+    <comp lib="1" loc="(350,230)" name="OR Gate">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="1" loc="(350,330)" name="AND Gate">
       <a name="facing" val="north"/>
       <a name="inputs" val="3"/>
       <a name="negate0" val="true"/>
@@ -280,9 +280,6 @@
     <comp lib="2" loc="(370,210)" name="Multiplexer">
       <a name="width" val="8"/>
     </comp>
-    <comp lib="2" loc="(410,410)" name="Multiplexer">
-      <a name="facing" val="west"/>
-    </comp>
     <comp lib="2" loc="(930,290)" name="Multiplexer">
       <a name="selloc" val="tr"/>
       <a name="width" val="2"/>
@@ -293,6 +290,7 @@
     </comp>
     <comp lib="4" loc="(450,220)" name="Register">
       <a name="appearance" val="logisim_evolution"/>
+      <a name="label" val="IP"/>
     </comp>
     <comp lib="4" loc="(570,240)" name="ROM">
       <a name="appearance" val="logisim_evolution"/>
@@ -390,25 +388,22 @@ a0 23
     <wire from="(280,220)" to="(280,560)"/>
     <wire from="(280,220)" to="(340,220)"/>
     <wire from="(280,560)" to="(1150,560)"/>
-    <wire from="(330,310)" to="(330,330)"/>
-    <wire from="(330,330)" to="(340,330)"/>
-    <wire from="(340,330)" to="(340,450)"/>
-    <wire from="(350,230)" to="(350,250)"/>
-    <wire from="(350,300)" to="(350,320)"/>
-    <wire from="(350,320)" to="(360,320)"/>
-    <wire from="(360,320)" to="(360,410)"/>
-    <wire from="(360,410)" to="(410,410)"/>
+    <wire from="(330,280)" to="(330,330)"/>
+    <wire from="(330,330)" to="(350,330)"/>
+    <wire from="(330,390)" to="(330,450)"/>
+    <wire from="(350,380)" to="(350,430)"/>
+    <wire from="(350,430)" to="(390,430)"/>
     <wire from="(370,210)" to="(420,210)"/>
+    <wire from="(370,280)" to="(370,300)"/>
     <wire from="(370,300)" to="(400,300)"/>
-    <wire from="(400,300)" to="(400,340)"/>
+    <wire from="(370,380)" to="(430,380)"/>
+    <wire from="(400,300)" to="(400,370)"/>
+    <wire from="(400,370)" to="(480,370)"/>
     <wire from="(420,210)" to="(420,250)"/>
     <wire from="(420,250)" to="(450,250)"/>
     <wire from="(430,290)" to="(430,300)"/>
     <wire from="(430,290)" to="(450,290)"/>
-    <wire from="(430,430)" to="(430,450)"/>
-    <wire from="(430,450)" to="(440,450)"/>
-    <wire from="(440,400)" to="(460,400)"/>
-    <wire from="(440,420)" to="(460,420)"/>
+    <wire from="(430,380)" to="(430,390)"/>
     <wire from="(480,310)" to="(480,320)"/>
     <wire from="(510,250)" to="(520,250)"/>
     <wire from="(520,150)" to="(520,250)"/>
@@ -506,7 +501,7 @@ a0 23
     <comp lib="0" loc="(530,340)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="west"/>
-      <a name="label" val="regZero"/>
+      <a name="label" val="pcREGb"/>
       <a name="output" val="true"/>
     </comp>
     <comp lib="0" loc="(560,370)" name="Pin">
@@ -543,8 +538,8 @@ a0 23
       <a name="addrWidth" val="4"/>
       <a name="appearance" val="classic"/>
       <a name="contents">addr/data: 4 11
-480 430 a0 90 209 109 249 277
-278 240 241 242 243 244 245 246
+480 410 a0 90 209 109 249 257
+258 240 241 242 243 244 245 246
 </a>
       <a name="dataWidth" val="11"/>
     </comp>
