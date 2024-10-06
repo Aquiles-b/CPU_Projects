@@ -15,3 +15,5 @@ Processador de 8 bits baseado na arquitetura MIPS. Possui memória RAM.
 
 Processador que faz operações vetoriais de 8 bits. Possui memória RAM em cada núcleo.
 São 4 núcleos que fazem operações vetoriais e 1 núcleo que faz operações escalares.
+
+![cpu_projects](https://github.com/user-attachments/assets/5e08bbe7-2939-48e5-90a3-e274fd6044b7)
